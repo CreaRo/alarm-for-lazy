@@ -1,0 +1,131 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#2196F3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto">
+
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/buttonFloat_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="24dp"
+        android:background="#F44336"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_delete" />
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/buttonFloat_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="24dp"
+        android:background="#8BC34A"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_tick" />
+
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/buttonFloat_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFB400"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_action_clock" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_begin"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/clockbegin"
+            android:text="Begin"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/ic_action_clock_empty"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Begin"
+            android:id="@+id/ll_begin_tv"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_end"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textSize="20sp"
+            android:text="End"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/ic_action_clock_empty"
+            android:id="@+id/clockend"
+            android:layout_gravity="center_horizontal" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="End"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm Interval"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:id="@+id/main_tv"
+        android:layout_below="@+id/ll_end"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/linearlayout_numbers"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_begin"
+        android:layout_toLeftOf="@+id/ll_end"
+        android:layout_toRightOf="@+id/ll_begin">
+
+    </LinearLayout>
+
+    <NumberPicker
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberPicker"
+        android:layout_below="@+id/main_tv"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
